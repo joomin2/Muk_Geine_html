@@ -1,9 +1,7 @@
-# Muk_Geine_html
-tutorial_youtube API v3_view
+#🍟[Muk_Geine] Youtube API V3를 이용하여 음식 검색 결과 썸네일 동영상 업로드 테스트
 
-# 📖 책 취향 공유 서비스앱 README
+![image](https://github.com/joomin2/Muk_Geine_html/assets/108183797/fc1b5902-845b-4fa0-9f52-b10ab5c08b01)
 
-![image](https://github.com/joomin2/Muk_Geine_html/assets/108183797/b17f7e87-61df-4082-aa88-e2b75e0a80ed)
 
 
 - 배포 URL : https://ohmycode-readme.netlify.app
