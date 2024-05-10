@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>먹지니</title>
+    <style type="text/css">
+        .video-container {
+            margin-bottom: 20px;
+            /*display: inline-block;*/ /* 이 코드 없으면 세로 정렬, 있으면 가로 정렬 */
+        }
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <div id="videos"></div>
+
+    <script>
+        // 검색할 키워드 설정
+        var meal_keyword = "부대찌개"+ ""+"백종원"; // 여기에 원하는 키워드를 추가
+
+        // YouTube Data API 키
+        //var api_key = "Your Key";
+
+        // YouTube Data API 호출을 위한 URL //아래 URL에서 maxResults=1 의 '1'이란 숫자를 바꾸면 그 갯수만큼 비디오를 보여 줌
+        var api_url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + encodeURIComponent(meal_keyword) + "&key=" + api_key;
+
+        // API 요청 보내기
+        fetch(api_url)
+            .then(response => response.json())
+            .then(data => {
+                var videosContainer = document.getElementById("videos");
+
+                // 각 비디오에 대해 반복하여 처리
+                data.items.forEach(item => {
+                    // 동영상 ID 가져오기
+                    var videoId = item.id.videoId;
+
+                    // 비디오를 담을 컨테이너 생성
+                    var videoContainer = document.createElement("div");
+                    videoContainer.className = "video-container";
+
+                    // iframe 생성하여 동영상 삽입
+                    var iframe = document.createElement("iframe");
+                    iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=0&mute=1";
+                    iframe.setAttribute("frameborder", "0");
+                    iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                    iframe.setAttribute("allowfullscreen", "");
+
+                    // 컨테이너에 iframe 추가
+                    videoContainer.appendChild(iframe);
+
+                    // 전체 비디오 컨테이너에 추가
+                    videosContainer.appendChild(videoContainer);
+                });
+            })
+            .catch(error => console.error('API 호출 중 오류 발생:', error));
+    </script>
+</body>
+</html>
