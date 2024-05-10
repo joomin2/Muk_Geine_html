@@ -1,8 +1,6 @@
 #🍟[Muk_Geine] Youtube API V3를 이용하여 음식 검색 결과 썸네일 동영상 업로드 테스트
 
-![image](https://github.com/joomin2/Muk_Geine_html/assets/108183797/fc1b5902-845b-4fa0-9f52-b10ab5c08b01)
-
-
+![image](https://github.com/joomin2/Muk_Geine_html/assets/108183797/2ebdf928-4d3e-454c-b1f6-f962734e3bb9)
 
 - 배포 URL : https://ohmycode-readme.netlify.app
 - Test ID : readme@test.com
