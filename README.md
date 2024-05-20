@@ -38,9 +38,7 @@
 
 <div align="center">
 
-| **고지연** | **김민제** | **양희지** | **지창언** |
-| :------: |  :------: | :------: | :------: |
-| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
+| **박주민** | **이승민** | **이재원** | **장우진** |
 
 </div>
 
@@ -51,8 +49,8 @@
 - Front : HTML, React, styled-components, Recoil
 - Back-end : 제공된 API 활용
 - 버전 및 이슈관리 : Github, Github Issues, Github Project
-- 협업 툴 : Discord, Notion, Github Wiki
-- 서비스 배포 환경 : Netlify
+- 협업 툴 : Discord,KakaoTalk, Github 
+- 서비스 배포 환경 : 
 - 디자인 : 
 <br>
 
@@ -62,12 +60,6 @@
 
 ### 브랜치 전략
 
-- Git-flow 전략을 기반으로 main, develop 브랜치와 feature 보조 브랜치를 운용했습니다.
-- main, develop, Feat 브랜치로 나누어 개발을 하였습니다.
-    - **main** 브랜치는 배포 단계에서만 사용하는 브랜치입니다.
-    - **develop** 브랜치는 개발 단계에서 git-flow의 master 역할을 하는 브랜치입니다.
-    - **Feat** 브랜치는 기능 단위로 독립적인 개발 환경을 위하여 사용하고 merge 후 각 브랜치를 삭제해주었습니다.
-
 <br>
 
 ## 3. 프로젝트 구조
@@ -76,26 +68,26 @@
 
 ## 4. 역할 분담
 
-### 🍊고지연
+### 박주민
 
 -
 
 <br>
     
-### 👻김민제
+### 이승민
 
 - **UI**
 
 
 <br>
 
-### 😎양희지
+### 이재원
 
 
 
 <br>
 
-### 🐬지창언
+### 장우진
 
 -
 <br>
@@ -104,9 +96,9 @@
 
 ### 개발 기간
 
-- 전체 개발 기간 : 2022-12-09 ~ 2022-12-31
-- UI 구현 : 2022-12-09 ~ 2022-12-16
-- 기능 구현 : 2022-12-17 ~ 2022-12-31
+- 전체 개발 기간 : 
+- UI 구현 : 
+- 기능 구현 : 
 
 <br>
 
@@ -133,10 +125,7 @@
 <br>
 
 ### [회원가입]
-- 이메일 주소와 비밀번호를 입력하면 입력창에서 바로 유효성 검사가 진행되고 통과하지 못한 경우 각 경고 문구가 입력창 하단에 표시됩니다.
-- 이메일 주소의 형식이 유효하지 않거나 이미 가입된 이메일일 경우 또는 비밀번호가 6자 미만일 경우에는 각 입력창 하단에 경구 문구가 나타납니다.
-- 작성이 완료된 후, 유효성 검사가 통과된 경우 다음 버튼이 활성화되며, 버튼을 클릭하면 프로필 설정 화면이 나타납니다.
-
+- 
 | 회원가입 |
 |----------|
 
@@ -173,20 +162,14 @@
 <br>
 
 ### [검색]
-- 사용자 이름 혹은 계정 ID로 유저를 검색할 수 있습니다.
-- 검색어와 일치하는 단어는 파란색 글씨로 표시됩니다.
-- 클릭 시 해당 유저의 프로필 페이지로 진입합니다.
-
+-
 <br>
 
 
 
 ## 8. 트러블 슈팅
 
-- [탭메뉴 프로필 버튼 이슈](https://github.com/likelion-project-README/README/wiki/README-8.%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85_%ED%83%AD%EB%A9%94%EB%89%B4-%ED%94%84%EB%A1%9C%ED%95%84-%EB%B2%84%ED%8A%BC-%EC%9D%B4%EC%8A%88)
-
-- [프로필 수정 이슈](https://github.com/likelion-project-README/README/wiki/README-8.%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85_%ED%94%84%EB%A1%9C%ED%95%84-%EC%88%98%EC%A0%95-%EC%9D%B4%EC%8A%88)
-
+- 
 <br>
 
 ## 9. 개선 목표
@@ -195,19 +178,10 @@
     
 - **23-01-17 성능 개선 내용**
     
-    ![성능개선 후](https://user-images.githubusercontent.com/106502312/212872369-7ceeb2cf-d551-41d2-bfb0-01e35e9903fe.png)
-    
-    - 이미지 최적화
-        - `<img>` 요소에 `width` , `height` 속성값을 명시해 불필요한 Reflow를 방지했습니다.
-        - browser-image-compression 라이브러리를 사용해 유저가 업로드하는 이미지를 압축했습니다.
-        - Intersection Observer API를 사용해 Lazy Loading 기법을 적용하여 홈 피드의 게시글 이미지가 viewport 내에 들어오는 순간 로딩되도록 변경했습니다.
-    - 웹폰트 최적화
-        - WOFF2 포맷을 추가하고 가장 우선적으로 적용되도록 선언했습니다.
-        - 서브셋 폰트로 교체해 용량을 줄였습니다.
     
 <br>
 
 ## 10. 프로젝트 후기
 
-### 🍊 고지연
+(활용할지 고민중) 
 
